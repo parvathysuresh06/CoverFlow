@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
             CoverData("Item 1", "71.50 MAD"),
             CoverData("Item 2", "53.20 MAD"),
             CoverData("Item 3", "92.80 MAD"),
-            CoverData("Item 3", "92.80 MAD")
+            CoverData("Item 4", "72.80 MAD")
 
         )
 
@@ -28,13 +28,16 @@ class MainActivity : AppCompatActivity() {
         recyclerView.adapter = adapter
 
         val currentLocale = Locale.getDefault()
+
         val isArabic = currentLocale.language == "ar"
 
 //        if (isArabic) {
 //            recyclerView.layoutDirection = View.LAYOUT_DIRECTION_RTL
 //        }
 
-        recyclerView.layoutDirection = View.LAYOUT_DIRECTION_RTL
+//        recyclerView.layoutDirection = View.LAYOUT_DIRECTION_RTL
+        adapter.setTextDirection(View.TEXT_DIRECTION_RTL)
 
     }
+
 }

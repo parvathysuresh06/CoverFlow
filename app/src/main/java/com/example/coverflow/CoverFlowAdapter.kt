@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 
 class CoverFlowAdapter(private val dataList: List<CoverData>) :
     RecyclerView.Adapter<CoverFlowAdapter.ViewHolder>() {
-
+    private var textDirection: Int = View.TEXT_DIRECTION_RTL
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context)
             .inflate(R.layout.card_layout, parent, false)
@@ -24,6 +24,11 @@ holder.bind(data)
 
     override fun getItemCount(): Int {
         return dataList.size
+    }
+
+    fun setTextDirection(direction: Int) {
+        textDirection = direction
+        notifyDataSetChanged()
     }
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
