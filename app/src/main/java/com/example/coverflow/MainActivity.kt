@@ -4,8 +4,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.PagerSnapHelper
 import androidx.recyclerview.widget.RecyclerView
 import java.util.*
+
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -16,28 +18,21 @@ class MainActivity : AppCompatActivity() {
         val layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
         recyclerView.layoutManager = layoutManager
 
-        val dataList = listOf(
-            CoverData("Item 1", "71.50 MAD"),
-            CoverData("Item 2", "53.20 MAD"),
-            CoverData("Item 3", "92.80 MAD"),
-            CoverData("Item 4", "72.80 MAD")
+        val snapHelper = PagerSnapHelper()
+        snapHelper.attachToRecyclerView(recyclerView)
 
+        val dataList = listOf(
+            CoverData("ACCOUNTS", "71.50 MAD"),
+            CoverData("DEPOSIT", "53.20 MAD"),
+            CoverData("LOANS", "92.80 MAD"),
+            CoverData("CARD", "72.80 MAD")
         )
 
         val adapter = CoverFlowAdapter(dataList)
         recyclerView.adapter = adapter
 
-        val currentLocale = Locale.getDefault()
-
-        val isArabic = currentLocale.language == "ar"
-
-//        if (isArabic) {
-//            recyclerView.layoutDirection = View.LAYOUT_DIRECTION_RTL
-//        }
-
-//        recyclerView.layoutDirection = View.LAYOUT_DIRECTION_RTL
-        adapter.setTextDirection(View.TEXT_DIRECTION_RTL)
-
+        // Attach ScaleTransformer to RecyclerView
+        val scaleTransformer = ScaleTransformer()
+        recyclerView.addOnScrollListener(scaleTransformer)
     }
-
 }

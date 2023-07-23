@@ -9,9 +9,18 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
-        android:supportsRtl="false"
+        android:supportsRtl="true"
         android:theme="@style/Theme.CoverFlow"
         tools:targetApi="31">
+        <activity
+            android:name=".CoverFlowRecyclerView"
+            android:exported="false"
+            android:label="@string/title_activity_cover_flow_recycler_view"
+            android:theme="@style/Theme.CoverFlow.NoActionBar">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
         <activity
             android:name=".MainActivity"
             android:exported="true">
