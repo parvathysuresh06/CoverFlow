@@ -9,7 +9,7 @@ class ScaleTransformer : RecyclerView.OnScrollListener() {
 
     private val mScaleValue = 0.8f
     private val mTranslationValue = 0.3f
-    private val mSecondCardScale = 1.0f
+//    private val mSecondCardScale = 1.0f
 
     override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
         super.onScrolled(recyclerView, dx, dy)

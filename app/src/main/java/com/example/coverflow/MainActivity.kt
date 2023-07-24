@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
             CoverData("ACCOUNTS", "71.50 MAD"),
             CoverData("DEPOSIT", "53.20 MAD"),
             CoverData("LOANS", "92.80 MAD"),
-            CoverData("CARD", "72.80 MAD")
+            CoverData("CARDS", "72.80 MAD")
         )
 
         val adapter = CoverFlowAdapter(dataList)
