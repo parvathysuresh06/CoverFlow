@@ -17,7 +17,7 @@ class CoverFlowAdapter(private val dataList: List<CoverData>) :
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val data = dataList[position]
-holder.bind(data)
+        holder.bind(data)
 
 
     }
@@ -36,7 +36,7 @@ holder.bind(data)
         private val textViewValue: TextView = itemView.findViewById(R.id.textViewTwo)
 
         fun bind(data: CoverData) {
-textView.text=data.text
+            textView.text = data.text
             textViewValue.text = data.textTwo
         }
         // Declare your ViewHolder views and bind them in the onCreateViewHolder() method

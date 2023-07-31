@@ -1,11 +1,10 @@
 package com.example.coverflow
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.PagerSnapHelper
 import androidx.recyclerview.widget.RecyclerView
+import ru.tinkoff.scrollingpagerindicator.ScrollingPagerIndicator
 import java.util.*
 
 
@@ -17,9 +16,6 @@ class MainActivity : AppCompatActivity() {
         val recyclerView: RecyclerView = findViewById(R.id.recyclerView)
         val layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
         recyclerView.layoutManager = layoutManager
-
-        val snapHelper = PagerSnapHelper()
-        snapHelper.attachToRecyclerView(recyclerView)
 
         val dataList = listOf(
             CoverData("ACCOUNTS", "71.50 MAD"),
@@ -34,5 +30,8 @@ class MainActivity : AppCompatActivity() {
         // Attach ScaleTransformer to RecyclerView
         val scaleTransformer = ScaleTransformer()
         recyclerView.addOnScrollListener(scaleTransformer)
+        val recyclerIndicator : ScrollingPagerIndicator = findViewById(R.id.indicator)
+        recyclerIndicator.attachToRecyclerView(recyclerView)
+
     }
 }

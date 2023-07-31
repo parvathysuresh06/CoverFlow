@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/card_view"
     android:layout_width="320dp"
     android:layout_height="200dp"
-app:cardCornerRadius="5dp"
-    android:backgroundTint="#68bbe3
-"
-
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_margin="8dp">
+    android:layout_margin="8dp"
+    android:backgroundTint="#68bbe3"
+    app:cardCornerRadius="5dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="320dp"
         android:layout_height="200dp"
         android:layout_marginEnd="8dp"
+        android:layoutDirection="rtl"
         android:layout_marginBottom="16dp">
 
 
@@ -22,53 +21,52 @@ app:cardCornerRadius="5dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:textColor="@color/white"
             android:layout_marginTop="15dp"
-            android:textDirection="locale"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            android:text="Account "
+            android:textColor="@color/white"
             android:textSize="25sp"
-            android:text="Account " />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
         <ImageView
             android:id="@+id/typeButton"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:layout_marginBottom="8dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
             android:layout_marginTop="15dp"
             android:layout_marginEnd="30dp"
-            android:src="@drawable/ic_time"/>
+            android:layout_marginBottom="8dp"
+            android:src="@drawable/ic_time"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/textViewTwo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="20dp"
+            android:text="71.50 MAD"
+            android:textColor="@color/white"
             android:textDirection="locale"
             android:textSize="20dp"
-            android:textColor="@color/white"
-            android:layout_marginTop="15dp"
-            android:layout_marginBottom="20dp"
-            android:layout_marginEnd="30dp"
-            app:layout_constraintTop_toBottomOf="@id/textViewName"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:text="71.50 MAD"/>
+            app:layout_constraintTop_toBottomOf="@id/textViewName" />
 
         <TextView
             android:id="@+id/textViewThree"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="20dp"
+            android:text="Total balance"
+            android:textColor="@color/white"
             android:textDirection="locale"
             android:textSize="15sp"
-            android:textColor="@color/white"
-            android:layout_marginBottom="20dp"
-            android:layout_marginEnd="30dp"
-            app:layout_constraintTop_toBottomOf="@id/textViewTwo"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:text="Total balance"/>
-
+            app:layout_constraintTop_toBottomOf="@id/textViewTwo" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
