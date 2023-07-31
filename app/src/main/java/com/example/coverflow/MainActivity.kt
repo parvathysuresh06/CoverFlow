@@ -7,7 +7,6 @@ import androidx.recyclerview.widget.RecyclerView
 import ru.tinkoff.scrollingpagerindicator.ScrollingPagerIndicator
 import java.util.*
 
-
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,8 +29,7 @@ class MainActivity : AppCompatActivity() {
         // Attach ScaleTransformer to RecyclerView
         val scaleTransformer = ScaleTransformer()
         recyclerView.addOnScrollListener(scaleTransformer)
-        val recyclerIndicator : ScrollingPagerIndicator = findViewById(R.id.indicator)
+        val recyclerIndicator: ScrollingPagerIndicator = findViewById(R.id.indicator)
         recyclerIndicator.attachToRecyclerView(recyclerView)
-
     }
 }

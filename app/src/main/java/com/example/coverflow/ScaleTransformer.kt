@@ -2,8 +2,6 @@ package com.example.coverflow
 
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
-import java.lang.Math.abs
-
 
 class ScaleTransformer : RecyclerView.OnScrollListener() {
 
