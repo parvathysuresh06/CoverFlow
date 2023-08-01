@@ -8,10 +8,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.PagerSnapHelper
 import ru.tinkoff.scrollingpagerindicator.ScrollingPagerIndicator
 
-class CoverFlow @JvmOverloads constructor(
-    context: Context, attrs: AttributeSet? = null
-) : RecyclerView(context, attrs) {
-
+class CoverFlow @JvmOverloads constructor(context: Context, attrs: AttributeSet? = null) : RecyclerView(context, attrs) {
 
     private val scaleTransformer = ScaleTransformer()
     private val snapHelper = PagerSnapHelper()
@@ -21,7 +18,6 @@ class CoverFlow @JvmOverloads constructor(
         setSnapHelper()
         super.setLayoutManager(layoutManager)
         super.addOnScrollListener(scaleTransformer)
-
     }
 
     private fun setSnapHelper() {
@@ -53,5 +49,4 @@ class CoverFlow @JvmOverloads constructor(
             }
         }
     }
-
 }

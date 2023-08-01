@@ -29,7 +29,5 @@ class MainActivity : AppCompatActivity() {
         val adapter = CoverFlowAdapter(dataList)
         recyclerView.adapter = adapter
         coverFlow.scrollingIndicator(recyclerIndicator, recyclerView)
-
-
     }
 }
