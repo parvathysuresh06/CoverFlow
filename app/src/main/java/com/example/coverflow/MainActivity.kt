@@ -2,6 +2,8 @@ package com.example.coverflow
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearSnapHelper
+import androidx.recyclerview.widget.PagerSnapHelper
 import ru.tinkoff.scrollingpagerindicator.ScrollingPagerIndicator
 
 
@@ -33,6 +35,9 @@ class MainActivity : AppCompatActivity() {
         recyclerView.addOnScrollListener(scaleTransformer)
         val recyclerIndicator: ScrollingPagerIndicator = findViewById(R.id.indicator)
         recyclerIndicator.attachToRecyclerView(recyclerView)
+
+        val snapHelper = PagerSnapHelper()
+        snapHelper.attachToRecyclerView(recyclerView)
 
     }
 }
