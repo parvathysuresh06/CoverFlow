@@ -2,11 +2,7 @@ package com.example.coverflow
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import androidx.recyclerview.widget.RecyclerView.LayoutManager
 import ru.tinkoff.scrollingpagerindicator.ScrollingPagerIndicator
-import java.util.*
 
 
 class MainActivity : AppCompatActivity() {
@@ -17,11 +13,10 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         strLang = intent.getStringExtra("language").toString()
-        val recyclerView: RecyclerCoverFlow = findViewById(R.id.recyclerView)
+        val recyclerView: CoverFlow = findViewById(R.id.recyclerView)
 
-        val layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
-
-        recyclerView.layoutManager = layoutManager
+        val coverFlow = CoverFlow(this)
+        recyclerView.layoutManager = coverFlow.layoutManager
 
         val dataList = listOf(
             CoverData(getString(R.string.accounts), "71.50 MAD"),
