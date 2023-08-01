@@ -18,10 +18,10 @@ class MainActivity : AppCompatActivity() {
         recyclerView.layoutManager = layoutManager
 
         val dataList = listOf(
-            CoverData("ACCOUNTS", "71.50 MAD"),
-            CoverData("DEPOSIT", "53.20 MAD"),
-            CoverData("LOANS", "92.80 MAD"),
-            CoverData("CARDS", "72.80 MAD")
+            CoverData(getString(R.string.accounts), "71.50 MAD"),
+            CoverData(getString(R.string.deposit), "53.20 MAD"),
+            CoverData(getString(R.string.loans), "92.80 MAD"),
+            CoverData(getString(R.string.cards), "72.80 MAD")
         )
 
         val adapter = CoverFlowAdapter(dataList)

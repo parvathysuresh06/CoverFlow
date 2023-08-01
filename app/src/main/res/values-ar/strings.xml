@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <resources>
+        <string name="app_name">COVERFLOW</string>
+        <string name="title_activity_cover_flow_recycler_view">SSS  </string>
+        <!-- Add other Arabic string resources here -->
+
+
+    <string name="accounts">حسابات</string>
+    <string name="deposit">إيداع</string>
+    <string name="loans">يُقرض</string>
+    <string name="cards">رذذشزززر</string>
+</resources>
