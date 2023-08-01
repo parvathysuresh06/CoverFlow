@@ -8,4 +8,8 @@
     <string name="deposit">DEPOSIT</string>
     <string name="loans">LOAN</string>
     <string name="cards">CARDS</string>
+        <string-array name="languages">
+            <item>English</item>
+            <item>Arabic</item>
+        </string-array>
 </resources>

@@ -5,24 +5,36 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".EntryPageActivity">
-    <Button
-        android:id="@+id/btn_lang"
+
+    <TextView
+        android:id="@+id/tvHint"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Language"
-        app:layout_constraintTop_toTopOf="parent"
+        android:text="Select Languages"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/spnLang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:entries="@array/languages"
+        android:layout_marginBottom="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvHint" />
+
 
     <Button
         android:id="@+id/card"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/btn_lang"
-        app:layout_constraintStart_toStartOf="@id/btn_lang"
-        app:layout_constraintEnd_toEndOf="@id/btn_lang"
-        android:text="Cards"/>
+        android:text="Cards"
+        android:layout_marginTop="40dp"
+        app:layout_constraintEnd_toEndOf="@id/spnLang"
+        app:layout_constraintStart_toStartOf="@id/spnLang"
+        app:layout_constraintTop_toBottomOf="@id/spnLang" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
