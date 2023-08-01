@@ -2,8 +2,6 @@ package com.example.coverflow
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.recyclerview.widget.LinearSnapHelper
-import androidx.recyclerview.widget.PagerSnapHelper
 import ru.tinkoff.scrollingpagerindicator.ScrollingPagerIndicator
 
 
@@ -13,12 +11,14 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        val recyclerIndicator: ScrollingPagerIndicator = findViewById(R.id.indicator)
 
         strLang = intent.getStringExtra("language").toString()
         val recyclerView: CoverFlow = findViewById(R.id.recyclerView)
 
         val coverFlow = CoverFlow(this)
         recyclerView.layoutManager = coverFlow.layoutManager
+        coverFlow.setSnapHelper(recyclerView)
 
         val dataList = listOf(
             CoverData(getString(R.string.accounts), "71.50 MAD"),
@@ -29,15 +29,8 @@ class MainActivity : AppCompatActivity() {
 
         val adapter = CoverFlowAdapter(dataList)
         recyclerView.adapter = adapter
+        coverFlow.scrollingIndicator(recyclerIndicator, recyclerView)
 
-        // Attach ScaleTransformer to RecyclerView
-        val scaleTransformer = ScaleTransformer()
-        recyclerView.addOnScrollListener(scaleTransformer)
-        val recyclerIndicator: ScrollingPagerIndicator = findViewById(R.id.indicator)
-        recyclerIndicator.attachToRecyclerView(recyclerView)
-
-        val snapHelper = PagerSnapHelper()
-        snapHelper.attachToRecyclerView(recyclerView)
 
     }
 }
