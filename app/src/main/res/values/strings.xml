@@ -9,7 +9,7 @@
     <string name="loans">LOAN</string>
     <string name="cards">CARDS</string>
         <string-array name="languages">
-            <item>English</item>
-            <item>Arabic</item>
+            <item>en</item>
+            <item>ar</item>
         </string-array>
 </resources>

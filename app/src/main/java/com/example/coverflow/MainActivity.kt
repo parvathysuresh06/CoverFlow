@@ -11,18 +11,15 @@ import java.util.*
 
 class MainActivity : AppCompatActivity() {
 
-    var strLang=""
+    var strLang = ""
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         strLang = intent.getStringExtra("language").toString()
-        val recyclerView: RecyclerView = findViewById(R.id.recyclerView)
+        val recyclerView: RecyclerCoverFlow = findViewById(R.id.recyclerView)
 
-        val layoutManager = if (strLang == "English"){
-            LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
-        } else LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, true)
-
+        val layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
 
         recyclerView.layoutManager = layoutManager
 
@@ -39,7 +36,7 @@ class MainActivity : AppCompatActivity() {
         // Attach ScaleTransformer to RecyclerView
         val scaleTransformer = ScaleTransformer()
         recyclerView.addOnScrollListener(scaleTransformer)
-        val recyclerIndicator : ScrollingPagerIndicator = findViewById(R.id.indicator)
+        val recyclerIndicator: ScrollingPagerIndicator = findViewById(R.id.indicator)
         recyclerIndicator.attachToRecyclerView(recyclerView)
 
     }

@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <androidx.recyclerview.widget.RecyclerView
+    <com.example.coverflow.RecyclerCoverFlow
         android:id="@+id/recyclerView"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
