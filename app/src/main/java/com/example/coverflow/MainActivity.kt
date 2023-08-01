@@ -18,7 +18,6 @@ class MainActivity : AppCompatActivity() {
 
         val coverFlow = CoverFlow(this)
         recyclerView.layoutManager = coverFlow.layoutManager
-        coverFlow.setSnapHelper(recyclerView)
 
         val dataList = listOf(
             CoverData(getString(R.string.accounts), "71.50 MAD"),

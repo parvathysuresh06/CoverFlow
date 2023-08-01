@@ -18,13 +18,14 @@ class CoverFlow @JvmOverloads constructor(
 
     override fun setLayoutManager(layout: LayoutManager?) {
         val layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+        setSnapHelper()
         super.setLayoutManager(layoutManager)
         super.addOnScrollListener(scaleTransformer)
 
     }
 
-    fun setSnapHelper(recyclerView: CoverFlow) {
-        snapHelper.attachToRecyclerView(recyclerView)
+    private fun setSnapHelper() {
+        snapHelper.attachToRecyclerView(this)
     }
 
     fun scrollingIndicator(recyclerIndicator: ScrollingPagerIndicator, recyclerView: CoverFlow) {
