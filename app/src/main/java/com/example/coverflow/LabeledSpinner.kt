@@ -39,8 +39,12 @@ class LabeledSpinner @JvmOverloads constructor(
             ta.recycle()
         }
     }
+    fun getSelectedItem():String {
+        return spnValue.selectedItem.toString()
+    }
 
     fun setItem(arrayAdapter: ArrayAdapter<String>) {
         spnValue.adapter = arrayAdapter
+
     }
 }
