@@ -43,4 +43,11 @@ class LabeledSpinner @JvmOverloads constructor(
     fun setItem(arrayAdapter: ArrayAdapter<String>) {
         spnValue.adapter = arrayAdapter
     }
+    fun getSelectedItem(): String {
+        return spnValue.selectedItem.toString()
+    }
+
+    fun setSelectedItem(position: Int) {
+        spnValue.setSelection(position)
+    }
 }

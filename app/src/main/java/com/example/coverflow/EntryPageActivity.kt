@@ -22,7 +22,8 @@ class EntryPageActivity : AppCompatActivity() {
 
         cardBtn.setOnClickListener{
             val configuration = Configuration()
-            configuration.setLocale(Locale(spnLang.toString()))
+
+            configuration.setLocale(Locale(spnLang.getSelectedItem()))
             resources.updateConfiguration(configuration, resources.displayMetrics)
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
