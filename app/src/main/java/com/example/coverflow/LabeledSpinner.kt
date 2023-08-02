@@ -1,6 +1,5 @@
 package com.example.coverflow
 
-import android.annotation.SuppressLint
 import android.content.Context
 import android.util.AttributeSet
 import android.view.View
@@ -43,11 +42,11 @@ class LabeledSpinner @JvmOverloads constructor(
     fun setItem(arrayAdapter: ArrayAdapter<String>) {
         spnValue.adapter = arrayAdapter
     }
-    fun getSelectedItem(): String {
-        return spnValue.selectedItem.toString()
-    }
 
     fun setSelectedItem(position: Int) {
         spnValue.setSelection(position)
+    }
+    fun getSelectedItem(): String {
+        return spnValue.selectedItem.toString()
     }
 }
