@@ -22,6 +22,7 @@ class LabeledSpinner @JvmOverloads constructor(
     private lateinit var label: TextView
     private lateinit var outHint: TextView
 
+
     init {
         init(attrs)
     }
