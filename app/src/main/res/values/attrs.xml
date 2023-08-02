@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="colorDashboardHeaderBackground" format="color" />
+    <attr name="iconsColor" format="color" />
+    <attr name="primaryButtonsColor" format="color" />
+    <attr name="colorSummaryItemGradientEnd" format="color" />
+    <attr name="colorSummaryItemGradientStart" format="color" />
+    <attr name="dashboardGradientStart" format="color" />
+    <attr name="dashboardGradientEnd" format="color" />
+    <attr name="imageRes" format="reference" />
+    <attr name="digital_services_bg" format="reference" />
+
+    <declare-styleable name="SwipeableRecyclerview">
+        <attr name="swipeMenuItems" format="reference" />
+        <attr name="swipeButtonWidth" format="integer" />
+        <attr name="swipeMoreIcon" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="labeledTextViewStyle">
+        <attr name="labelValue" format="string" />
+        <attr name="textValue" format="string" />
+        <attr name="hint" format="string" />
+        <attr name="editTextBg" format="string"/>
+
+    </declare-styleable>
+
+    <declare-styleable name="optionBoxAttr">
+        <attr name="image" format="integer" />
+        <attr name="text" format="string" />
+    </declare-styleable>
+</resources>

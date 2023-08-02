@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_view_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/labelValue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#969494"
+        android:textDirection="locale"
+        android:textSize="11sp" />
+
+    <Spinner
+        android:id="@+id/spnValue"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/edit_text_bg"
+        android:paddingStart="16dp"
+        android:textDirection="locale" />
+
+    <TextView
+        android:id="@+id/out_hint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#969494"
+        android:textDirection="locale"
+        android:textSize="11sp"
+        android:textStyle="italic"
+        android:visibility="visible" />
+
+</LinearLayout>
